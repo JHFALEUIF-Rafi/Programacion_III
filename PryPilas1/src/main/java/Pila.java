@@ -32,4 +32,12 @@ public class Pila {
         }
         return coleccion.pop().toString();
     }
+
+    public String Listar(){
+        StringBuilder sb = new StringBuilder();
+        for (Url url : coleccion) {
+            sb.append(url.toString()).append("\n");
+        }
+        return sb.toString().isEmpty()? "No existen elementos" : sb.toString();
+    }
 }
